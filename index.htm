@@ -1,0 +1,88 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fae's Reverie</title>  <!-- Set your game name here -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+    <div class="game-container">
+        <!-- Add your game name here -->
+        <h1 id="game-title">Fae's Reverie</h1>  <!-- Game title heading -->
+    
+        
+    
+
+<audio id="background-music" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-littleidea.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<button id="start-music" onclick="startMusic()">🎶 Start Music</button>
+
+<div class="controls">
+    <div class="volume-control">
+        <button id="mute-btn" onclick="toggleMute()">🔊 Mute/Unmute</button>
+        <div class="volume">
+            <button onclick="adjustVolume('up')">🔼 Volume Up</button>
+            <button onclick="adjustVolume('down')">🔽 Volume Down</button>
+        </div>
+    </div>
+
+    <div class="name-your-fairy">
+        <label for="fairy-name">Name Your Fairy: </label>
+        <input type="text" id="fairy-name" placeholder="Enter Fairy Name" />
+        <button onclick="saveFairyName()">Save Name</button>
+    </div>
+</div>
+
+<div id="display-name"></div>
+
+<div class="game-container">
+    <div class="character">
+        <img id="base" src="base.png" alt="Base Character">
+        <img id="hat" src="" alt="Hat">
+        <img id="shirt" src="" alt="Shirt">
+        <img id="accessory" src="" alt="Accessory">
+    </div>
+    
+    <div id="outfit-name"></div> <!-- Outfit Label -->
+<h2>✨ Style Your Fairy up</h2>
+    <div class="options">
+        <h2>🌺 Fairycore Hats</h2>
+        <button onclick="changeHat('mushroomhat.png')">🍄 Mushroom Hat</button>
+        <button onclick="changeHat('')">❌ Remove Hat</button>
+
+        <h2>🌺 Fairycore Dresses</h2>
+        <button onclick="changeShirt('shirtt.png')">🌸 Pink Fairy Dress</button>
+        <button onclick="changeShirt('shirt.png')">🌿 Green Leaf Dress</button>
+        <button onclick="changeShirt('')">❌ Remove Dress</button>
+
+        <h2>🌺 Fairycore Accessories</h2>
+        <button onclick="changeAccessory('flowercrown.png')">🌺 Flower Crown</button>
+        <button onclick="changeAccessory('wand.png')">🎈 Fairy Wings</button>
+        <button onclick="changeAccessory('')">❌ Remove Accessory</button>
+
+        <h2>🔀 Random Fairy Outfit</h2>
+        <button onclick="randomFairyOutfit()">🔀 Randomize Look</button>
+
+        <h2>📸 Save Your Fairy</h2>
+        <button onclick="saveFairy()">📸 Save Screenshot</button>
+
+        <h2>☀️🌙 Day/Night Mode</h2>
+        <button onclick="toggleMode()">🌗 Toggle Day/Night</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<div class="share-buttons">
+    <button onclick="shareOnTwitter()">📲 Share on Twitter</button>
+</div>
+
+
+</body>
+</html>
